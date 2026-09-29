@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warung PKK Desa Dauh Puri Kaja — Dapur Tradisi, Katering & Jamuan Resmi</title>
+  
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            ecru: {
+              50: '#FDFBF7',
+              100: '#F9F5EC',
+              200: '#F3EDE2',
+              300: '#E7DFD1',
+              400: '#CFC2AF',
+            },
+            espresso: {
+              700: '#3D2F29',
+              800: '#2A201C',
+              900: '#1A1412',
+            },
+            terracotta: {
+              500: '#B8653B',
+              600: '#9E4E27',
+              700: '#843C1B',
+            }
+          },
+          letterSpacing: {
+            widestPlus: '0.22em',
+            ultra: '0.3em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-padding-top: 5rem;
+      background-color: #FDFBF7;
+    }
+    ::selection {
+      background-color: #1A1412;
+      color: #FDFBF7;
+    }
+    .hairline-b {
+      border-bottom: 1px solid rgba(26, 20, 18, 0.08);
+    }
+    .hairline-t {
+      border-top: 1px solid rgba(26, 20, 18, 0.08);
+    }
+    .hairline-all {
+      border: 1px solid rgba(26, 20, 18, 0.08);
+    }
+    /* Subtle image hover zoom */
+    .img-zoom {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .img-zoom {
+      transform: scale(1.04);
+    }
+  </style>
+</head>
+
+<body class="bg-ecru-50 text-espresso-900 font-sans antialiased selection:bg-espresso-900 selection:text-white">
+
+  <!-- [ 1. NAVBAR — Café Kitsuné Minimalist Aesthetic ] -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md hairline-b transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Monogram & Official Village Tag -->
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 rounded-full hairline-all flex items-center justify-center bg-white text-espresso-900 group-hover:bg-espresso-900 group-hover:text-ecru-50 transition-colors duration-300 shadow-2xs">
+          <span class="font-serif text-sm italic font-semibold tracking-normal">PKK</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-base tracking-widest uppercase font-semibold text-espresso-900 leading-none">WARUNG PKK</span>
+          <span class="text-[9px] uppercase tracking-ultra text-stone-500 font-medium mt-1">Desa Dauh Puri Kaja — Denpasar</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-9 text-[11px] font-semibold tracking-widestPlus uppercase text-espresso-800">
+        <a href="#profil" class="hover:text-terracotta-600 transition-colors duration-200">Profil</a>
+        <a href="#katalog" class="hover:text-terracotta-600 transition-colors duration-200">Katalog Menu</a>
+        <a href="#standar-mutu" class="hover:text-terracotta-600 transition-colors duration-200">Standar Kemasan</a>
+        <a href="#lokasi" class="hover:text-terracotta-600 transition-colors duration-200">Fasilitas Gerai</a>
+      </nav>
+
+      <!-- CTA Button: Direct WhatsApp Order Link -->
+      <div class="flex items-center gap-3">
+        <a href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20Admin%20Warung%20PKK%20Desa%20Dauh%20Puri%20Kaja,%20saya%20ingin%20memesan%20katering%20/%20konsumsi" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-semibold tracking-wider uppercase text-ecru-50 bg-espresso-900 hover:bg-terracotta-600 transition duration-300 shadow-sm active:scale-95">
+          <span>Pesan Sekarang</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- [ 2. HERO SECTION — Editorial Showcase Featuring Real Packaging & Bento Assets ] -->
+  <section class="pt-32 pb-20 md:pt-40 md:pb-28">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <!-- Top Kicker Pill -->
+      <div class="flex items-center justify-center gap-3 mb-6">
+        <span class="h-[1px] w-8 bg-espresso-700/20"></span>
+        <span class="text-[10px] uppercase font-semibold tracking-ultra text-terracotta-600">Dapur Kuliner Komunitas & Pemberdayaan Desa</span>
+        <span class="h-[1px] w-8 bg-espresso-700/20"></span>
+      </div>
+
+      <!-- 1 Sentence Tagline (Café Kitsuné Serif Headline) -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-normal text-espresso-900 leading-[1.15] tracking-tight">
+          Cita rasa otentik dapur rumahan Denpasar, disajikan dengan ketelitian tradisi dan higienitas modern.
+        </h1>
+        <p class="font-sans text-xs sm:text-sm text-stone-600 mt-5 max-w-xl mx-auto leading-relaxed font-light">
+          Dari nasi kotak rapat dinas, prasmanan adat upakara, paket snack box sehat, hingga program gizi desa — seluruh hidangan disiapkan segar oleh ibu-ibu penggerak TP PKK Desa Dauh Puri Kaja.
+        </p>
+      </div>
+
+      <!-- Visual Display: Real Packaging Asset (Menu_Nasi_Kotak_2) + Bento Asset (Menu_Nasi_Kotak_3) -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-5xl mx-auto">
+        
+        <!-- Left Banner: Official White Packaging with Red Seal -->
+        <div class="md:col-span-7 rounded-2xl overflow-hidden bg-white hairline-all relative group shadow-xs">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-ecru-100">
+            <img 
+              src="Menu_Nasi_Kotak_2.jpeg" 
+              alt="Kemasan Boks Resmi Warung PKK Desa Dauh Puri Kaja" 
+              class="w-full h-full object-cover object-center img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=80';"
+            />
+          </div>
+          <div class="p-6 bg-white flex items-center justify-between">
+            <div>
+              <span class="text-[9px] uppercase tracking-ultra text-terracotta-600 font-semibold block">Standar Penyajian</span>
+              <h3 class="font-serif text-xl font-medium text-espresso-900 mt-0.5">Kemasan Segel Resmi Warung PKK</h3>
+              <p class="text-xs text-stone-500 font-light mt-1">Boks scalloped putih bersih berstempel segel merah untuk konsumsi rapat & instansi.</p>
+            </div>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0 ml-4" title="Higienis Terstandarisasi"></span>
+          </div>
+        </div>
+
+        <!-- Right Banner: Premium Kompartemen Nasi Kotak -->
+        <div class="md:col-span-5 rounded-2xl overflow-hidden bg-white hairline-all relative group shadow-xs flex flex-col justify-between">
+          <div class="aspect-[4/3] md:aspect-square w-full overflow-hidden bg-ecru-100">
+            <img 
+              src="Menu_Nasi_Kotak_3.jpeg" 
+              alt="Paket Nasi Kotak Komplit Warung PKK" 
+              class="w-full h-full object-cover object-center img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80';"
+            />
+          </div>
+          <div class="p-6 bg-white">
+            <span class="text-[9px] uppercase tracking-ultra text-stone-400 font-semibold block">Menu Unggulan</span>
+            <div class="flex items-center justify-between mt-0.5">
+              <h3 class="font-serif text-xl font-medium text-espresso-900">Nasi Kotak Premium Komplit</h3>
+              <span class="font-serif text-base font-semibold text-terracotta-600">IDR 25.000</span>
+            </div>
+            <p class="text-xs text-stone-500 font-light mt-1.5 leading-relaxed">
+              Sate lilit Bali, ayam rempah serundeng, telur, mie goreng beralas daun pisang segar.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Trust Metrics Indicators -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12 pt-8 hairline-t text-center">
+        <div>
+          <span class="block text-[10px] uppercase tracking-ultra text-stone-400 font-semibold">Bahan Pangan</span>
+          <span class="font-serif text-base text-espresso-900 italic mt-0.5 block">100% Segar Lokal</span>
+        </div>
+        <div>
+          <span class="block text-[10px] uppercase tracking-ultra text-stone-400 font-semibold">Resep Tradisi</span>
+          <span class="font-serif text-base text-espresso-900 italic mt-0.5 block">Olahan Tangan PKK</span>
+        </div>
+        <div>
+          <span class="block text-[10px] uppercase tracking-ultra text-stone-400 font-semibold">Kapasitas Produksi</span>
+          <span class="font-serif text-base text-espresso-900 italic mt-0.5 block">Hingga 500+ Porsi/Hari</span>
+        </div>
+        <div>
+          <span class="block text-[10px] uppercase tracking-ultra text-stone-400 font-semibold">Wilayah Layanan</span>
+          <span class="font-serif text-base text-espresso-900 italic mt-0.5 block">Denpasar & Sekitarnya</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- [ 3. ABOUT / PROFIL — 2-3 Sentences + Info Badges ] -->
+  <section id="profil" class="py-20 bg-ecru-100 hairline-t hairline-b">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      
+      <span class="text-[10px] uppercase tracking-ultra text-terracotta-600 font-bold block mb-3">Tentang Gerai & Dapur Desa</span>
+      
+      <h2 class="font-serif text-2xl sm:text-4xl text-espresso-900 font-normal mb-6">
+        Sebuah Cerita Rasa dari Gotong Royong Perempuan Desa Dauh Puri Kaja
+      </h2>
+
+      <!-- 2-3 Sentences Concept -->
+      <p class="text-stone-700 text-sm sm:text-base leading-relaxed font-light max-w-2xl mx-auto mb-10">
+        Warung PKK Desa Dauh Puri Kaja merupakan inisiatif kemandirian ekonomi yang menyajikan aneka sajian kuliner rumahan, katering kantor, serta pesanan upacara adat khas Bali. Setiap hidangan dimasak dengan standar kebersihan tinggi dan bumbu rempah asli oleh ibu-ibu penggerak PKK, menghadirkan cita rasa yang jujur dan mengenyangkan.
+      </p>
+
+      <!-- Badge Info: Jam Buka, Lokasi, dan Layanan -->
+      <div class="flex flex-wrap justify-center items-center gap-3">
+        
+        <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white hairline-all text-espresso-800 text-[11px] font-medium tracking-wide shadow-2xs">
+          <svg class="w-3.5 h-3.5 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke-width="1.5"></circle>
+            <path stroke-linecap="round" stroke-width="1.5" d="M12 6v6l4 2"></path>
+          </svg>
+          <span><strong>Buka:</strong> Senin – Sabtu, 08.00 – 17.00 WITA</span>
+        </div>
+
+        <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white hairline-all text-espresso-800 text-[11px] font-medium tracking-wide shadow-2xs">
+          <svg class="w-3.5 h-3.5 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span><strong>Lokasi:</strong> Kec. Denpasar Utara, Kota Denpasar</span>
+        </div>
+
+        <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-espresso-900 text-ecru-50 text-[11px] font-medium tracking-wide shadow-2xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span>Melayani Pesanan Katering, Nasi Kotak & Upacara</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- [ 4. PRODUCT GRID — Minimalist Catalog with Real Assets ] -->
+  <section id="katalog" class="py-24 max-w-6xl mx-auto px-6">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 pb-6 hairline-b">
+      <div>
+        <span class="text-[10px] uppercase tracking-ultra text-terracotta-600 font-bold block mb-1">Etalase Kuliner</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-espresso-900 font-normal">Katalog Produk & Layanan</h2>
+        <p class="text-stone-500 text-xs sm:text-sm font-light mt-1">Dibuat segar sesuai pesanan dengan resep autentik dan higienitas terjamin.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap gap-2" id="filter-buttons">
+        <button onclick="filterProducts('all')" class="category-btn active px-4 py-2 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-espresso-900 text-ecru-50 transition duration-200">
+          Semua
+        </button>
+        <button onclick="filterProducts('nasi-kotak')" class="category-btn px-4 py-2 rounded-full text-[11px] font-semibold tracking-wider uppercase text-stone-600 hover:text-espresso-900 hairline-all bg-white transition duration-200">
+          Nasi Kotak
+        </button>
+        <button onclick="filterProducts('adat')" class="category-btn px-4 py-2 rounded-full text-[11px] font-semibold tracking-wider uppercase text-stone-600 hover:text-espresso-900 hairline-all bg-white transition duration-200">
+          Adat & Upacara
+        </button>
+        <button onclick="filterProducts('prasmanan')" class="category-btn px-4 py-2 rounded-full text-[11px] font-semibold tracking-wider uppercase text-stone-600 hover:text-espresso-900 hairline-all bg-white transition duration-200">
+          Prasmanan
+        </button>
+        <button onclick="filterProducts('snack')" class="category-btn px-4 py-2 rounded-full text-[11px] font-semibold tracking-wider uppercase text-stone-600 hover:text-espresso-900 hairline-all bg-white transition duration-200">
+          Snack & Rapat
+        </button>
+        <button onclick="filterProducts('pmt')" class="category-btn px-4 py-2 rounded-full text-[11px] font-semibold tracking-wider uppercase text-stone-600 hover:text-espresso-900 hairline-all bg-white transition duration-200">
+          Menu PMT Sehat
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="product-container">
+      
+      <!-- ITEM 1: Nasi Kotak Premium Komplit (Menu_Nasi_Kotak_3) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="nasi-kotak">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Menu_Nasi_Kotak_3.jpeg', 'Nasi Kotak Premium Komplit')">
+            <img 
+              src="Menu_Nasi_Kotak_3.jpeg" 
+              alt="Paket Nasi Kotak Komplit Warung PKK" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-espresso-900 hairline-all">
+              Best Seller
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Paket Nasi Kotak Premium Komplit
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Nasi pulen beralas daun pisang, sate lilit Bali batang bambu, ayam rempah serundeng, telur pindang/balado, mie goreng, perkedel kentang, serundeng kelapa, kerupuk, dan buah jeruk segar.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 25.000</span>
+          <button onclick="orderItem('Paket Nasi Kotak Premium Komplit', '25.000')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 2: Nasi Kotak Reguler Ayam Lengkuas (Menu_Nasi_Kotak_1) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="nasi-kotak">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Menu_Nasi_Kotak_1.jpeg', 'Paket Nasi Kotak Reguler Ayam Lengkuas')">
+            <img 
+              src="Menu_Nasi_Kotak_1.jpeg" 
+              alt="Paket Nasi Kotak Reguler Ayam Lengkuas" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-espresso-900 hairline-all">
+              Eco-Kraft
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Nasi Kotak Reguler Ayam Lengkuas
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Nasi putih pulen porsi pas beralas daun, potongan ayam goreng bumbu lengkuas gurih meresap, tahu & tempe goreng renyah, lalapan segar (timun & selada), serta cup sambal terpisah.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 18.000</span>
+          <button onclick="orderItem('Nasi Kotak Reguler Ayam Lengkuas', '18.000')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 3: Nasi Yasa Upakara Bali (Nasi_Yasa) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="adat">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Nasi_Yasa.jpeg', 'Nasi Yasa / Tamas Upakara Bali')">
+            <img 
+              src="Nasi_Yasa.jpeg" 
+              alt="Nasi Yasa Tamas Upakara Bali" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-terracotta-600 hairline-all">
+              Upacara Adat
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Nasi Yasa Tamas Upakara Bali
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Sajian sakral beralas wadah tamas janur bulat: nasi kuning gurih, sate lilit batang bambu lebar, ayam bumbu Bali, udang renyah, telur pindang, sambal embe, dan hiasan bunga jepun (kamboja).
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 30.000</span>
+          <button onclick="orderItem('Nasi Yasa Tamas Upakara Bali', '30.000')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 4: Nasi Jinggo Autentik Daun Pisang (Nasi_Jinggo) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="nasi-kotak">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Nasi_Jinggo.jpeg', 'Nasi Jinggo Autentik Daun Pisang')">
+            <img 
+              src="Nasi_Jinggo.jpeg" 
+              alt="Nasi Jinggo Pincuk Daun Pisang" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-espresso-900 hairline-all">
+              Tradisi Bali
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Nasi Jinggo Autentik Daun Pisang
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Nasi bungkus daun pisang asli dengan lauk suwiran ayam gurih ketumbar, telur rebus bumbu, serundeng kelapa manis gurih, mie goreng kampung, dan sambal ulek pedas mantap.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 8.000</span>
+          <button onclick="orderItem('Nasi Jinggo Autentik Daun Pisang', '8.000')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 5: Buffet Prasmanan Tradisional Bali (Menu_Prasmanan_1) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="prasmanan">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Menu_Prasmanan_1.jpeg', 'Buffet Prasmanan Tradisional Bali')">
+            <img 
+              src="Menu_Prasmanan_1.jpeg" 
+              alt="Buffet Prasmanan Tradisional Bali" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-espresso-900 hairline-all">
+              Katering Acara
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Buffet Prasmanan Tradisional Bali
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Penyajian piring gerabah beralas selada: sate lilit bambu melingkar, ayam suwir pelalah (sisit), perkedel kentang rempah, urap jukut kacang panjang, telur bumbu, dan sambal matah & embe segar.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 45.000 <span class="text-xs text-stone-400 font-normal">/pax</span></span>
+          <button onclick="orderItem('Buffet Prasmanan Tradisional Bali', '45.000/pax')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 6: Buffet Prasmanan Selera Nusantara (Menu_Prasmanan_2) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="prasmanan">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Menu_Prasmanan_2.jpeg', 'Buffet Prasmanan Selera Nusantara')">
+            <img 
+              src="Menu_Prasmanan_2.jpeg" 
+              alt="Buffet Prasmanan Selera Nusantara" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-espresso-900 hairline-all">
+              Hajatan & Rapat
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Buffet Prasmanan Selera Nusantara
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Ayam goreng renyah saus oriental/asam manis, mie goreng hajatan wortel sawi, tumis capcay sayur segar, telur balado bumbu cabai merah, mangkuk acar timun wortel, dan kerupuk kaleng renyah.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 40.000 <span class="text-xs text-stone-400 font-normal">/pax</span></span>
+          <button onclick="orderItem('Buffet Prasmanan Selera Nusantara', '40.000/pax')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 7: Snack Box Rapat Kedinasan (Snack_Box_2) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="snack">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Snack_Box_2.jpeg', 'Snack Box Rapat Kedinasan')">
+            <img 
+              src="Snack_Box_2.jpeg" 
+              alt="Snack Box Rapat Kedinasan Warung PKK" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-espresso-900 hairline-all">
+              Rapat Kantor
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Snack Box Rapat Kedinasan
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Paket kardus rapi: botol air mineral 330ml, risoles ragout isi ayam dengan cabai rawit hijau, bakpao mini kukus putih, kue basah talam pandan gurih santan, serta camilan kacang bawang renyah.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 12.000</span>
+          <button onclick="orderItem('Snack Box Rapat Kedinasan', '12.000')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 8: Jamuan Meja Coffee Break Rapat (Snack_Box_1) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="snack">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Snack_Box_1.jpeg', 'Paket Jamuan Coffee Break Rapat')">
+            <img 
+              src="Snack_Box_1.jpeg" 
+              alt="Paket Jamuan Coffee Break Rapat" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-espresso-900 hairline-all">
+              Buffet Break
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Paket Jamuan Coffee Break Rapat
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Penataan meja panjang beralas mika rapi untuk rapat kantor desa/instansi: aneka kue basah tradisional beralas daun, dispenser air panas/dingin, gula, teh celup, dan varian kopi saset.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 15.000 <span class="text-xs text-stone-400 font-normal">/peserta</span></span>
+          <button onclick="orderItem('Paket Jamuan Coffee Break Rapat', '15.000/peserta')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 9: Paket PMT Nutrisi Posyandu (Menu_PMT_Posyandu_1) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="pmt">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Menu_PMT_Posyandu_1.jpeg', 'Paket PMT Nutrisi Lengkap')">
+            <img 
+              src="Menu_PMT_Posyandu_1.jpeg" 
+              alt="Paket PMT Nutrisi Posyandu Lengkap" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-emerald-700 hairline-all">
+              Program Gizi
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Paket PMT Nutrisi Lengkap
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Paket konsumsi gizi seimbang: ikan goreng bumbu rempah, tempe bacem/goreng, sayur bening segar dalam wadah mika tertutup, telur rebus utuh, sambal cup, dan pendamping susu bernutrisi tinggi.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 18.000</span>
+          <button onclick="orderItem('Paket PMT Nutrisi Lengkap', '18.000')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 10: Sup Kaldu Segar Porsi Cup (Menu_PMT_Posyandu_2) -->
+      <div class="product-card group flex flex-col justify-between bg-white rounded-2xl hairline-all p-4 hover:shadow-lg transition-all duration-300" data-category="pmt">
+        <div>
+          <div class="aspect-square w-full rounded-xl overflow-hidden bg-ecru-100 mb-4 relative cursor-pointer" onclick="openLightbox('Menu_PMT_Posyandu_2.jpeg', 'Sup Kaldu Sayur Segar Cup')">
+            <img 
+              src="Menu_PMT_Posyandu_2.jpeg" 
+              alt="Sup Kaldu Sayur Segar Cup PMT" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80';"
+            />
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[9px] font-semibold tracking-widest uppercase bg-white/95 backdrop-blur-xs text-emerald-700 hairline-all">
+              Porsi Praktis
+            </span>
+          </div>
+          <h3 class="font-serif text-xl font-medium text-espresso-900 group-hover:text-terracotta-600 transition">
+            Sup Kaldu Sayur Segar Cup
+          </h3>
+          <p class="text-xs text-stone-500 font-light mt-1.5 line-clamp-3 leading-relaxed">
+            Penyajian wadah cup higienis tertutup rapat: sup kaldu ayam/ikan bening hangat kaya rempah dengan irisan wortel manis, tomat segar, dan taburan daun seledri harum untuk balita & lansia.
+          </p>
+        </div>
+        <div class="pt-4 mt-4 hairline-t flex items-center justify-between">
+          <span class="font-serif text-base font-semibold text-espresso-900">IDR 8.000</span>
+          <button onclick="orderItem('Sup Kaldu Sayur Segar Cup', '8.000')" class="px-3.5 py-1.5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-espresso-900 hairline-all hover:bg-espresso-900 hover:text-white transition duration-200">
+            Pesan
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- [ 5. STANDAR MUTU & KEMASAN — Visual Showcase of Packaging ] -->
+  <section id="standar-mutu" class="py-20 bg-ecru-100 hairline-t hairline-b">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Editorial Description -->
+        <div class="lg:col-span-6 space-y-6">
+          <div>
+            <span class="text-[10px] uppercase tracking-ultra text-terracotta-600 font-bold block mb-1">Jaminan Mutu Konsumsi</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-espresso-900 font-normal">
+              Standar Pengemasan Bersih, Bersegel, & Ramah Lingkungan
+            </h2>
+          </div>
+          
+          <p class="text-sm text-stone-600 font-light leading-relaxed">
+            Setiap porsi makanan yang keluar dari dapur Warung PKK Desa Dauh Puri Kaja dikemas dengan memperhatikan kerapian dan protokol sanitasi pangan. Kami memastikan makanan tiba dalam kondisi segar, tertutup rapat, dan siap disajikan langsung pada meja rapat kedinasan maupun acara hajatan warga.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-espresso-900 text-ecru-50 flex items-center justify-center text-xs shrink-0 mt-0.5">✓</span>
+              <div>
+                <h4 class="text-xs uppercase tracking-wider font-semibold text-espresso-900">Segel Resmi Warung PKK</h4>
+                <p class="text-xs text-stone-500 font-light mt-0.5">Setiap boks putih ditutup dengan stiker penjamin mutu merah Warung PKK.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-espresso-900 text-ecru-50 flex items-center justify-center text-xs shrink-0 mt-0.5">✓</span>
+              <div>
+                <h4 class="text-xs uppercase tracking-wider font-semibold text-espresso-900">Pemisahan Sekat Higienis</h4>
+                <p class="text-xs text-stone-500 font-light mt-0.5">Kompartemen lauk, sambal cup, dan sayur dipisah agar kualitas rasa tetap terjaga.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-espresso-900 text-ecru-50 flex items-center justify-center text-xs shrink-0 mt-0.5">✓</span>
+              <div>
+                <h4 class="text-xs uppercase tracking-wider font-semibold text-espresso-900">Opsi Kemasan Tradisional & Modern</h4>
+                <p class="text-xs text-stone-500 font-light mt-0.5">Tersedia wadah boks karton bersih, boks mika kompartemen, maupun tamas janur adat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Packaging Photo Feature -->
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden bg-white hairline-all p-3 shadow-sm">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden bg-ecru-200">
+            <img 
+              src="Menu_Nasi_Kotak_2.jpeg" 
+              alt="Boks Putih Rapi Segel Warung PKK" 
+              class="w-full h-full object-cover img-zoom"
+              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80';"
+            />
+          </div>
+          <div class="px-4 py-3 flex items-center justify-between text-xs text-stone-500">
+            <span class="font-serif italic text-espresso-900">Dokumentasi Pesanan Boks Warung PKK</span>
+            <span class="text-[10px] uppercase tracking-wider text-terracotta-600 font-semibold">100% Food-Grade</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- [ 6. INFO & LOKASI — Featuring Real Store Facade (Foto_Depan_Warung) ] -->
+  <section id="lokasi" class="py-24 max-w-6xl mx-auto px-6">
+    
+    <div class="max-w-2xl mb-12">
+      <span class="text-[10px] uppercase tracking-ultra text-terracotta-600 font-bold block mb-1">Kunjungi & Kenali Gerai Kami</span>
+      <h2 class="font-serif text-3xl sm:text-4xl text-espresso-900 font-normal">Fasilitas Gerai & Lokasi Dapur</h2>
+      <p class="text-stone-500 text-xs sm:text-sm font-light mt-1">
+        Beralamat di pusat desa dengan gedung representatif, melayani pemesanan langsung maupun koordinasi teknis katering instansi.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      
+      <!-- Left: Real Storefront Photo (Foto_Depan_Warung.jpeg) -->
+      <div class="lg:col-span-6 rounded-2xl overflow-hidden hairline-all bg-white shadow-sm flex flex-col justify-between">
+        <div class="aspect-[16/11] w-full overflow-hidden bg-ecru-100 relative group cursor-pointer" onclick="openLightbox('Foto_Depan_Warung.jpeg', 'Gedung Gerai Warung PKK Desa Dauh Puri Kaja')">
+          <img 
+            src="Foto_Depan_Warung.jpeg" 
+            alt="Gedung Gerai Warung PKK Desa Dauh Puri Kaja" 
+            class="w-full h-full object-cover img-zoom"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80';"
+          />
+          <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full hairline-all text-[10px] uppercase tracking-widest font-semibold text-espresso-900">
+            Fasad Gerai Fisik Resmi
+          </div>
+        </div>
+
+        <div class="p-6">
+          <h4 class="font-serif text-xl font-medium text-espresso-900">Gerai Kuliner TP PKK Desa Dauh Puri Kaja</h4>
+          <p class="text-xs text-stone-500 font-light mt-1 leading-relaxed">
+            Gedung operasional bertingkat dengan arsitektur bata merah khas Bali dan etalase pelayanan warga, siap menerima kunjungan langsung untuk konsultasi porsi dan pengambilan pesanan.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Address Details & Map Embed -->
+      <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+        
+        <div class="bg-white p-6 sm:p-8 rounded-2xl hairline-all shadow-sm space-y-6">
+          
+          <!-- Address -->
+          <div class="flex items-start gap-4">
+            <span class="font-serif italic text-xl text-terracotta-600">01.</span>
+            <div>
+              <h5 class="text-xs uppercase tracking-widest font-semibold text-espresso-900">Alamat Gerai</h5>
+              <p class="text-xs sm:text-sm text-stone-600 font-light mt-1 leading-relaxed">
+                Kantor / Gerai TP PKK Desa Dauh Puri Kaja<br>
+                Kecamatan Denpasar Utara, Kota Denpasar, Bali 80231
+              </p>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="flex items-start gap-4">
+            <span class="font-serif italic text-xl text-terracotta-600">02.</span>
+            <div>
+              <h5 class="text-xs uppercase tracking-widest font-semibold text-espresso-900">Jam Operasional</h5>
+              <p class="text-xs sm:text-sm text-stone-600 font-light mt-1 leading-relaxed">
+                Senin – Sabtu: 08.00 – 17.00 WITA<br>
+                <span class="text-stone-400 text-xs italic">Minggu: Melayani pesanan katering khusus dengan konfirmasi H-1</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="flex items-start gap-4">
+            <span class="font-serif italic text-xl text-terracotta-600">03.</span>
+            <div>
+              <h5 class="text-xs uppercase tracking-widest font-semibold text-espresso-900">Hotline Pemesanan</h5>
+              <p class="text-xs sm:text-sm text-stone-600 font-light mt-1">
+                +62 812-3456-7890 (Pengurus Warung PKK)
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="pt-4 hairline-t flex flex-col sm:flex-row gap-3">
+            <a 
+              href="https://maps.google.com/?q=Desa+Dauh+Puri+Kaja+Denpasar" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white hairline-all text-espresso-900 text-[11px] font-semibold tracking-wider uppercase hover:bg-ecru-100 transition text-center"
+            >
+              <svg class="w-3.5 h-3.5 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              <span>Petunjuk Arah</span>
+            </a>
+
+            <a 
+              href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20Admin%20Warung%20PKK%20Desa%20Dauh%20Puri%20Kaja,%20saya%20ingin%20berkonsultasi%20mengenai%20pesanan%20katering" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-espresso-900 text-ecru-50 text-[11px] font-semibold tracking-wider uppercase hover:bg-terracotta-600 transition text-center shadow-sm"
+            >
+              <span>WhatsApp Admin</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Google Maps Embed Frame -->
+        <div class="rounded-2xl overflow-hidden hairline-all shadow-sm bg-ecru-200 h-52 relative">
+          <iframe 
+            title="Peta Lokasi Desa Dauh Puri Kaja Denpasar"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15777.67499990869!2d115.2037149!3d-8.6477145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24090288820c3%3A0x5030bfbca830db0!2sDauh%20Puri%20Kaja%2C%20Kec.%20Denpasar%20Utara%2C%20Kota%20Denpasar%2C%20Bali!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+            class="w-full h-full border-0 filter contrast-[0.95]"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- [ 7. FOOTER — Café Kitsuné Style Understated Footer ] -->
+  <footer class="bg-white hairline-t py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 hairline-b">
+        
+        <!-- Left: Identity -->
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full hairline-all flex items-center justify-center font-serif italic text-xs font-semibold text-espresso-900">
+              PKK
+            </div>
+            <span class="font-serif text-base tracking-widest uppercase font-semibold text-espresso-900">WARUNG PKK</span>
+          </div>
+          <p class="text-xs text-stone-500 font-light leading-relaxed max-w-sm">
+            Program pemberdayaan kuliner binaan Tim Penggerak PKK Desa Dauh Puri Kaja, Denpasar Utara. Merawat cita rasa tradisi Bali dalam standar kebersihan dan keanggunan modern.
+          </p>
+        </div>
+
+        <!-- Middle: Operating Hours -->
+        <div class="md:col-span-4 space-y-2">
+          <span class="text-[10px] uppercase tracking-ultra text-stone-400 font-semibold block">Jam Pelayanan</span>
+          <p class="text-xs text-stone-600 font-light">Senin – Sabtu, 08.00 – 17.00 WITA</p>
+          <p class="text-xs text-stone-500 font-light">Layanan katering rapat kantor & pesanan upacara desa</p>
+        </div>
+
+        <!-- Right: Social Media -->
+        <div class="md:col-span-3 space-y-2">
+          <span class="text-[10px] uppercase tracking-ultra text-stone-400 font-semibold block">Komunitas Desa</span>
+          <div class="flex items-center gap-3 pt-1">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full hairline-all flex items-center justify-center text-xs text-stone-600 hover:text-espresso-900 hover:bg-ecru-100 transition" title="Instagram">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <span class="text-xs text-stone-400 font-light">@dauhpruikaja.pkk</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Tag -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-400 font-light">
+        <p>&copy; 2026 TP PKK Desa Dauh Puri Kaja, Denpasar. Seluruh Hak Cipta Dilindungi.</p>
+        <p class="tracking-wide">Inspirasi Estetika Editorial Café Kitsuné</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Direct Order Confirmation Modal -->
+  <div id="order-modal" class="fixed inset-0 z-50 hidden bg-espresso-900/40 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-ecru-50 rounded-2xl max-w-sm w-full p-6 shadow-2xl hairline-all transform transition-all">
+      <div class="flex items-center justify-between mb-4 pb-3 hairline-b">
+        <h3 class="font-serif text-lg font-semibold text-espresso-900">Pemesanan Menu</h3>
+        <button onclick="closeModal()" class="w-7 h-7 rounded-full hairline-all flex items-center justify-center text-xs text-stone-500 hover:text-espresso-900 hover:bg-white transition">
+          ✕
+        </button>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl hairline-all mb-4">
+        <p class="text-[10px] uppercase tracking-ultra text-stone-400 font-medium">Menu Pilihan</p>
+        <p class="font-serif text-lg font-semibold text-espresso-900 mt-1" id="modal-item-name">-</p>
+        <p class="text-xs font-semibold text-terracotta-600 mt-0.5" id="modal-item-price">-</p>
+      </div>
+
+      <div class="mb-4">
+        <label for="portion-input" class="text-[10px] uppercase tracking-wider text-stone-500 font-medium block mb-1.5">Jumlah Porsi / Kotak</label>
+        <input 
+          id="portion-input" 
+          type="number" 
+          min="1" 
+          value="10" 
+          class="w-full px-3.5 py-2 text-xs rounded-xl bg-white hairline-all text-espresso-900 focus:outline-none focus:ring-1 focus:ring-espresso-900"
+        />
+      </div>
+
+      <p class="text-xs text-stone-500 font-light mb-6 leading-relaxed">
+        Pemesanan akan diteruskan langsung ke WhatsApp resmi Pengurus Warung PKK Desa Dauh Puri Kaja untuk konfirmasi jadwal dan teknis pengantaran.
+      </p>
+
+      <div class="flex gap-2.5">
+        <button onclick="closeModal()" class="flex-1 py-2.5 rounded-full hairline-all text-[11px] font-semibold uppercase tracking-wider text-stone-600 hover:bg-white transition">
+          Batal
+        </button>
+        <button onclick="proceedToWhatsApp()" class="flex-1 py-2.5 rounded-full bg-espresso-900 hover:bg-terracotta-600 text-[11px] font-semibold uppercase tracking-wider text-ecru-50 transition shadow-sm">
+          Ke WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal for Real Assets -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-espresso-900/80 backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="max-w-3xl w-full bg-white rounded-2xl overflow-hidden p-2 hairline-all shadow-2xl relative" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/90 hairline-all flex items-center justify-center text-xs text-espresso-900 hover:bg-espresso-900 hover:text-white transition">
+        ✕
+      </button>
+      <div class="aspect-[4/3] w-full overflow-hidden rounded-xl bg-ecru-100">
+        <img id="lightbox-img" src="" alt="Pratinjau Foto Asli" class="w-full h-full object-contain">
+      </div>
+      <div class="p-3 text-center">
+        <p id="lightbox-caption" class="font-serif text-lg text-espresso-900 italic font-medium">-</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State management
+    let currentSelectedProduct = {
+      name: '',
+      price: ''
+    };
+
+    // Category Filter Handler
+    function filterProducts(category) {
+      const cards = document.querySelectorAll('.product-card');
+      const buttons = document.querySelectorAll('.category-btn');
+
+      // Update button styling
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-espresso-900', 'text-ecru-50');
+        btn.classList.add('text-stone-600', 'hairline-all', 'bg-white');
+      });
+
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.remove('text-stone-600', 'hairline-all', 'bg-white');
+        event.currentTarget.classList.add('bg-espresso-900', 'text-ecru-50');
+      }
+
+      // Filter visible items
+      cards.forEach(card => {
+        const itemCategory = card.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Modal Trigger
+    function orderItem(name, price) {
+      currentSelectedProduct.name = name;
+      currentSelectedProduct.price = price;
+      
+      document.getElementById('modal-item-name').innerText = name;
+      document.getElementById('modal-item-price').innerText = price.includes('IDR') ? price : 'IDR ' + price;
+      document.getElementById('portion-input').value = '10';
+      document.getElementById('order-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('order-modal').classList.add('hidden');
+    }
+
+    // Lightbox Trigger for Photos
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').innerText = caption;
+      document.getElementById('lightbox-modal').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+    }
+
+    // Direct WhatsApp Dispatch with custom portion
+    function proceedToWhatsApp() {
+      const phone = "6281234567890";
+      const portions = document.getElementById('portion-input').value || '10';
+      const message = `Halo Admin Warung PKK Desa Dauh Puri Kaja, saya ingin memesan menu: *${currentSelectedProduct.name}* sebanyak *${portions} porsi/kotak* (Estimasi harga: ${currentSelectedProduct.price}). Mohon konfirmasi ketersediaan dan jadwal pengantaran. Terima kasih!`;
+      const encodedUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+      
+      closeModal();
+      window.open(encodedUrl, '_blank');
+    }
+
+    // Global Escape Key Listener
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeModal();
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>

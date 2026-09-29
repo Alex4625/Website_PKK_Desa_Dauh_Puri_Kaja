@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --color-ecru-50: #FCFAF7;
+  --color-ecru-100: #F7F3EB;
+  --color-ecru-200: #EFE8DC;
+  --color-ecru-300: #E3D9C7;
+  --color-ecru-400: #C9BBA5;
+
+  --color-charcoal-950: #14100E;
+  --color-charcoal-900: #1F1916;
+  --color-charcoal-800: #2E2521;
+  --color-charcoal-700: #463A34;
+  --color-charcoal-600: #685951;
+  --color-charcoal-500: #8D7B72;
+
+  --color-terracotta-500: #B25A34;
+  --color-terracotta-600: #984523;
+  --color-terracotta-700: #7A3418;
+  
+  --color-bali-gold: #C2934D;
+}
+
+/* Custom Editorial Base & Reset */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  background-color: #FAF7F2;
+  color: #1F1916;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Editorial Hairline Borders */
+.hairline-b {
+  border-bottom: 1px solid rgba(31, 25, 22, 0.08);
+}
+
+.hairline-t {
+  border-top: 1px solid rgba(31, 25, 22, 0.08);
+}
+
+.hairline-all {
+  border: 1px solid rgba(31, 25, 22, 0.08);
+}
+
+.hairline-strong {
+  border: 1px solid rgba(31, 25, 22, 0.16);
+}
+
+/* Smooth Image Zoom on Hover (Tartine style) */
+.editorial-img-zoom {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .editorial-img-zoom {
+  transform: scale(1.035);
+}
+
+/* Hide scrollbars for clean tab overflow */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
