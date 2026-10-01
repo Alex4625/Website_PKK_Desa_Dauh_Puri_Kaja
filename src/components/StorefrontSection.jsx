@@ -3,147 +3,139 @@ import { STORE_INFO } from '../data/warungData';
 import { MapPin, Clock, Phone, Navigation, MessageCircle } from 'lucide-react';
 
 export default function StorefrontSection({ onOpenLightbox }) {
+  const waUrl = `https://api.whatsapp.com/send?phone=${STORE_INFO.phone}&text=${encodeURIComponent("Halo Admin Warung PKK Desa Dauh Puri Kaja, saya ingin berkonsultasi mengenai pesanan katering.")}`;
+
   return (
-    <section id="gerai" className="py-24 bg-[#FAF7F2]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="gerai" className="py-20 bg-[#FAF7F2]">
+      <div className="max-w-6xl mx-auto px-5">
         
-        {/* Section Title */}
-        <div className="max-w-3xl mb-14">
-          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-[#B25A34] block mb-2">
-            Gerai Fisik & Kunjungan
-          </span>
-          <h2 className="font-serif text-3xl sm:text-5xl text-[#1F1916] font-normal leading-tight">
-            Fasilitas Gerai & Dapur Resmi
+        <div className="mb-12">
+          <h2 className="font-serif text-2xl sm:text-4xl text-[#1F1916] leading-tight">
+            Lokasi & Kontak
           </h2>
-          <p className="text-xs sm:text-sm text-[#685951] font-light mt-2 max-w-xl leading-relaxed">
-            Berlokasi di pusat desa dengan fasilitas gedung representatif berarsitektur khas Bali, siap melayani koordinasi teknis katering kantor maupun pengambilan langsung.
+          <p className="text-[14px] text-[#463A34] mt-2 max-w-lg leading-relaxed">
+            Berlokasi di pusat desa, siap melayani koordinasi katering dan pengambilan langsung.
           </p>
         </div>
 
-        {/* 2-Column Showcase: Building Facade Photo & Details + Map */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           
-          {/* Left Column: Real Storefront Facade Photo */}
-          <div className="lg:col-span-6 flex flex-col justify-between bg-white rounded-2xl hairline-all overflow-hidden shadow-xs">
-            <div 
-              className="aspect-[16/11] w-full overflow-hidden bg-[#F7F3EB] relative cursor-pointer group"
-              onClick={() => onOpenLightbox('/assets/Foto_Depan_Warung.jpeg', 'Gedung Resmi Gerai Warung PKK Desa Dauh Puri Kaja')}
-            >
-              <img 
-                src="/assets/Foto_Depan_Warung.jpeg" 
-                alt="Gedung Gerai Warung PKK Desa Dauh Puri Kaja" 
-                className="w-full h-full object-cover object-center editorial-img-zoom"
-              />
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-xs px-3.5 py-1.5 rounded-full hairline-all text-[10px] uppercase tracking-widest font-semibold text-[#1F1916] shadow-2xs">
-                Fasad Gedung Resmi
-              </div>
-            </div>
-
-            <div className="p-8">
-              <h3 className="font-serif text-2xl font-medium text-[#1F1916]">
-                Gedung Operasional TP PKK Desa Dauh Puri Kaja
-              </h3>
-              <p className="text-xs sm:text-sm text-[#685951] font-light mt-2 leading-relaxed">
-                Bangunan berarsitektur bata merah khas Bali yang tertata rapi, difungsikan sebagai pusat kegiatan kemandirian kuliner warga, pelatihan tata boga, serta dapur pengolahan katering berstandar higienis tinggi.
+          {/* Left: storefront photo */}
+          <div 
+            role="button"
+            tabIndex={0}
+            className="rounded-none overflow-hidden border border-[#1F1916]/8 cursor-pointer hover:border-[#1F1916]/20 transition-colors"
+            onClick={() => onOpenLightbox('/assets/Foto_Depan_Warung.jpeg', 'Gedung Gerai Warung PKK Desa Dauh Puri Kaja')}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                onOpenLightbox('/assets/Foto_Depan_Warung.jpeg', 'Gedung Gerai Warung PKK Desa Dauh Puri Kaja');
+              }
+            }}
+            aria-label="Perbesar foto gedung gerai"
+          >
+            <img 
+              src="/assets/Foto_Depan_Warung.jpeg" 
+              alt="Gedung Gerai Warung PKK" 
+              className="w-full aspect-[4/3] object-cover"
+            />
+            <div className="p-4 bg-white">
+              <p className="text-[14px] font-medium text-[#1F1916]">
+                Gedung TP PKK Desa Dauh Puri Kaja
+              </p>
+              <p className="text-[12px] text-[#685951] mt-0.5">
+                Arsitektur bata merah Bali, berfungsi sebagai pusat dapur dan pelatihan tata boga.
               </p>
             </div>
           </div>
 
-          {/* Right Column: Detailed Info Cards & Google Maps */}
-          <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
+          {/* Right: contact info + map */}
+          <div className="flex flex-col gap-4">
             
-            {/* Contact Details Card */}
-            <div className="bg-white p-8 rounded-2xl hairline-all shadow-xs space-y-6">
+            <div className="bg-white rounded-none border border-[#1F1916]/8 p-5 sm:p-6 space-y-5">
               
               {/* Address */}
-              <div className="flex items-start gap-4">
-                <div className="w-9 h-9 rounded-full bg-[#FAF7F2] hairline-all flex items-center justify-center text-[#B25A34] shrink-0 mt-0.5">
-                  <MapPin className="w-4 h-4" />
-                </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-[#B25A34] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#1F1916]">
-                    Alamat Gerai & Dapur
-                  </h4>
-                  <p className="text-xs sm:text-sm text-[#685951] font-light mt-1 leading-relaxed">
-                    {STORE_INFO.address}
-                  </p>
+                  <p className="text-[13px] font-semibold text-[#1F1916]">Alamat</p>
+                  <p className="text-[13px] text-[#463A34] mt-0.5">{STORE_INFO.address}</p>
                 </div>
               </div>
 
               {/* Hours */}
-              <div className="flex items-start gap-4">
-                <div className="w-9 h-9 rounded-full bg-[#FAF7F2] hairline-all flex items-center justify-center text-[#B25A34] shrink-0 mt-0.5">
-                  <Clock className="w-4 h-4" />
-                </div>
+              <div className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-[#B25A34] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#1F1916]">
-                    Jam Pelayanan
-                  </h4>
-                  <p className="text-xs sm:text-sm text-[#685951] font-light mt-1 leading-relaxed">
-                    {STORE_INFO.hoursWeekday}
-                  </p>
-                  <p className="text-[11px] text-[#8D7B72] italic mt-0.5">
-                    {STORE_INFO.hoursWeekend}
-                  </p>
+                  <p className="text-[13px] font-semibold text-[#1F1916]">Jam Pelayanan</p>
+                  <p className="text-[13px] text-[#463A34] mt-0.5">{STORE_INFO.hoursWeekday}</p>
+                  <p className="text-[12px] text-[#685951] italic mt-0.5">{STORE_INFO.hoursWeekend}</p>
                 </div>
               </div>
 
-              {/* Phone & Direct Consultation */}
-              <div className="flex items-start gap-4">
-                <div className="w-9 h-9 rounded-full bg-[#FAF7F2] hairline-all flex items-center justify-center text-[#B25A34] shrink-0 mt-0.5">
-                  <Phone className="w-4 h-4" />
-                </div>
+              {/* Phone */}
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-[#B25A34] shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#1F1916]">
-                    Hotline Informasi & Pesanan
-                  </h4>
-                  <p className="text-xs sm:text-sm text-[#685951] font-medium mt-1">
-                    {STORE_INFO.phoneDisplay} <span className="font-light text-[#8D7B72]">(Pengurus Warung PKK)</span>
-                  </p>
+                  <p className="text-[13px] font-semibold text-[#1F1916]">Telepon & WhatsApp</p>
+                  <p className="text-[13px] text-[#463A34] mt-0.5">{STORE_INFO.phoneDisplay}</p>
                 </div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="pt-4 hairline-t flex flex-col sm:flex-row gap-3">
+              {/* Action buttons */}
+              <div className="pt-4 border-t border-[#1F1916]/6 flex flex-col sm:flex-row gap-3">
                 <a
                   href={STORE_INFO.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-[11px] font-semibold tracking-wider uppercase text-[#1F1916] hairline-all hover:bg-[#FAF7F2] transition"
+                  className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-none text-[13px] font-medium text-[#1F1916] border border-[#1F1916]/15 hover:bg-[#FAF7F2] transition-colors"
                 >
-                  <Navigation className="w-3.5 h-3.5 text-[#B25A34]" />
-                  <span>Petunjuk Arah Maps</span>
+                  <Navigation className="w-4 h-4" />
+                  Buka di Maps / Petunjuk Arah
                 </a>
-
                 <a
-                  href={`https://api.whatsapp.com/send?phone=${STORE_INFO.phone}&text=${encodeURIComponent("Halo Admin Warung PKK Desa Dauh Puri Kaja, saya ingin berkonsultasi mengenai pesanan katering.")}`}
+                  href={waUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-[11px] font-semibold tracking-wider uppercase text-[#FAF7F2] bg-[#1F1916] hover:bg-[#B25A34] transition shadow-xs"
+                  className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-none text-[13px] font-medium text-white bg-[#25D366] hover:bg-[#20BD5A] transition-colors"
                 >
-                  <MessageCircle className="w-3.5 h-3.5" />
-                  <span>WhatsApp Admin</span>
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
                 </a>
               </div>
-
             </div>
 
-            {/* Google Maps Embed Frame */}
-            <div className="rounded-2xl overflow-hidden hairline-all shadow-xs bg-[#EFE8DC] h-56 relative">
-              <iframe
-                title="Peta Lokasi Desa Dauh Puri Kaja Denpasar"
-                src={STORE_INFO.mapsEmbed}
-                className="w-full h-full border-0 filter contrast-[0.96]"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            {/* Map */}
+            <div className="rounded-none overflow-hidden border border-[#1F1916]/8 bg-white flex flex-col">
+              <div className="h-52 w-full relative">
+                <iframe
+                  title="Lokasi Warung PKK Desa Dauh Puri Kaja"
+                  src={STORE_INFO.mapsEmbed}
+                  className="w-full h-full border-0"
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+                />
+              </div>
+              <a
+                href={STORE_INFO.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between px-4 py-2.5 bg-white border-t border-[#1F1916]/8 hover:bg-[#FAF7F2] text-[13px] text-[#1F1916] font-medium transition-colors"
+              >
+                <span className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-[#B25A34]" />
+                  Buka Lokasi di Google Maps
+                </span>
+                <span className="text-[12px] text-[#685951] font-normal">
+                  Buka Tab Baru ↗
+                </span>
+              </a>
             </div>
-
           </div>
 
         </div>
-
       </div>
     </section>
   );

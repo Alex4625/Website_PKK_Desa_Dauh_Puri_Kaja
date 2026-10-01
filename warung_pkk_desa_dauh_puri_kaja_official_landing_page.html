@@ -103,7 +103,7 @@
 
       <!-- CTA Button: Direct WhatsApp Order Link -->
       <div class="flex items-center gap-3">
-        <a href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20Admin%20Warung%20PKK%20Desa%20Dauh%20Puri%20Kaja,%20saya%20ingin%20memesan%20katering%20/%20konsumsi" 
+        <a href="https://api.whatsapp.com/send?phone=6285237158836&text=Halo%20Admin%20Warung%20PKK%20Desa%20Dauh%20Puri%20Kaja,%20saya%20ingin%20memesan%20katering%20/%20konsumsi" 
            target="_blank" 
            rel="noopener noreferrer" 
            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-semibold tracking-wider uppercase text-ecru-50 bg-espresso-900 hover:bg-terracotta-600 transition duration-300 shadow-sm active:scale-95">
@@ -724,7 +724,7 @@
           <!-- Quick Action Buttons -->
           <div class="pt-4 hairline-t flex flex-col sm:flex-row gap-3">
             <a 
-              href="https://maps.google.com/?q=Desa+Dauh+Puri+Kaja+Denpasar" 
+              href="https://maps.app.goo.gl/DuRzdiBP3Y1EftWV6?g_st=aw" 
               target="_blank" 
               rel="noopener noreferrer" 
               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white hairline-all text-espresso-900 text-[11px] font-semibold tracking-wider uppercase hover:bg-ecru-100 transition text-center"
@@ -736,7 +736,7 @@
             </a>
 
             <a 
-              href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20Admin%20Warung%20PKK%20Desa%20Dauh%20Puri%20Kaja,%20saya%20ingin%20berkonsultasi%20mengenai%20pesanan%20katering" 
+              href="https://api.whatsapp.com/send?phone=6285237158836&text=Halo%20Admin%20Warung%20PKK%20Desa%20Dauh%20Puri%20Kaja,%20saya%20ingin%20berkonsultasi%20mengenai%20pesanan%20katering" 
               target="_blank" 
               rel="noopener noreferrer" 
               class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-espresso-900 text-ecru-50 text-[11px] font-semibold tracking-wider uppercase hover:bg-terracotta-600 transition text-center shadow-sm"
@@ -751,7 +751,7 @@
         <div class="rounded-2xl overflow-hidden hairline-all shadow-sm bg-ecru-200 h-52 relative">
           <iframe 
             title="Peta Lokasi Desa Dauh Puri Kaja Denpasar"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15777.67499990869!2d115.2037149!3d-8.6477145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24090288820c3%3A0x5030bfbca830db0!2sDauh%20Puri%20Kaja%2C%20Kec.%20Denpasar%20Utara%2C%20Kota%20Denpasar%2C%20Bali!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1972.2!2d115.2141113!3d-8.6412729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23f00768f4717%3A0x74f4e169c148d89c!2sWarung%20PKK%20Desa%20Dauh%20Puri%20Kaja!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
             class="w-full h-full border-0 filter contrast-[0.95]"
             allowfullscreen="" 
             loading="lazy" 
@@ -933,7 +933,7 @@
 
     // Direct WhatsApp Dispatch with custom portion
     function proceedToWhatsApp() {
-      const phone = "6281234567890";
+      const phone = "6285237158836";
       const portions = document.getElementById('portion-input').value || '10';
       const message = `Halo Admin Warung PKK Desa Dauh Puri Kaja, saya ingin memesan menu: *${currentSelectedProduct.name}* sebanyak *${portions} porsi/kotak* (Estimasi harga: ${currentSelectedProduct.price}). Mohon konfirmasi ketersediaan dan jadwal pengantaran. Terima kasih!`;
       const encodedUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;

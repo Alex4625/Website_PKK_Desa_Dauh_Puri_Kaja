@@ -3,74 +3,61 @@
 @theme {
   --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  
-  --color-ecru-50: #FCFAF7;
-  --color-ecru-100: #F7F3EB;
-  --color-ecru-200: #EFE8DC;
-  --color-ecru-300: #E3D9C7;
-  --color-ecru-400: #C9BBA5;
-
-  --color-charcoal-950: #14100E;
-  --color-charcoal-900: #1F1916;
-  --color-charcoal-800: #2E2521;
-  --color-charcoal-700: #463A34;
-  --color-charcoal-600: #685951;
-  --color-charcoal-500: #8D7B72;
-
-  --color-terracotta-500: #B25A34;
-  --color-terracotta-600: #984523;
-  --color-terracotta-700: #7A3418;
-  
-  --color-bali-gold: #C2934D;
 }
 
-/* Custom Editorial Base & Reset */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
-  background-color: #FAF7F2;
-  color: #1F1916;
+  scroll-padding-top: 5rem;
 }
 
 body {
   font-family: var(--font-sans);
   background-color: #FAF7F2;
+  color: #1F1916;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-/* Editorial Hairline Borders */
-.hairline-b {
-  border-bottom: 1px solid rgba(31, 25, 22, 0.08);
+::selection {
+  background-color: #1F1916;
+  color: #FAF7F2;
 }
 
-.hairline-t {
-  border-top: 1px solid rgba(31, 25, 22, 0.08);
+/* Only utility that actually earns its keep: hide scrollbar for horizontal pill scroll */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Skip link — real accessibility, not decoration */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1.5rem;
+  z-index: 100;
+  padding: 0.75rem 1.5rem;
+  background: #1F1916;
+  color: #FAF7F2;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 1rem; }
+
+/* Lightbox fade — the only animation that serves UX */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.2s ease forwards;
 }
 
-.hairline-all {
-  border: 1px solid rgba(31, 25, 22, 0.08);
+/* Mobile menu slide */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-.hairline-strong {
-  border: 1px solid rgba(31, 25, 22, 0.16);
-}
-
-/* Smooth Image Zoom on Hover (Tartine style) */
-.editorial-img-zoom {
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.group:hover .editorial-img-zoom {
-  transform: scale(1.035);
-}
-
-/* Hide scrollbars for clean tab overflow */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.animate-slide-down {
+  animation: slideDown 0.15s ease forwards;
 }

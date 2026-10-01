@@ -1,92 +1,79 @@
 import React from 'react';
 import { STORE_INFO } from '../data/warungData';
-import { ArrowDown, MessageCircle, Sparkles } from 'lucide-react';
+import { ArrowDown, MessageCircle } from 'lucide-react';
 
 export default function Hero() {
-  const getWhatsAppUrl = () => {
-    const text = "Halo Admin Warung PKK Desa Dauh Puri Kaja, saya ingin konsultasi pemesanan katering.";
-    return `https://api.whatsapp.com/send?phone=${STORE_INFO.phone}&text=${encodeURIComponent(text)}`;
-  };
+  const waUrl = `https://api.whatsapp.com/send?phone=${STORE_INFO.phone}&text=${encodeURIComponent("Halo Admin Warung PKK Desa Dauh Puri Kaja, saya ingin konsultasi pemesanan katering resmi.")}`;
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-between pt-28 pb-12 overflow-hidden bg-[#1F1916] text-[#FAF7F2]">
-      
-      {/* Background Hero Image with Tartine-style Warm Moody Vignette */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/assets/Menu_Prasmanan_1.jpeg" 
-          alt="Jamuan Kuliner Warung PKK Desa Dauh Puri Kaja" 
-          className="w-full h-full object-cover object-center filter brightness-[0.42] contrast-[1.08] scale-105 transition-transform duration-1000"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#14100E] via-[#1F1916]/40 to-[#1F1916]/75" />
-      </div>
-
-      {/* Main Hero Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-16 md:pt-24 text-center my-auto">
+    <>
+      {/* Hero — let the photo be the hero, not the CSS */}
+      <section className="relative min-h-[85dvh] flex items-end pt-16 pb-12 sm:pb-16 overflow-hidden">
         
-        {/* Editorial Subtitle Pill */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm mb-8 animate-fade-in">
-          <Sparkles className="w-3.5 h-3.5 text-[#C2934D]" />
-          <span className="text-[11px] uppercase tracking-[0.28em] font-medium text-[#EFE8DC]">
-            Dapur Komunitas & Pemberdayaan Desa Dauh Puri Kaja
-          </span>
+        {/* Photo background — no Ken Burns, no grain, just the photo */}
+        <div className="absolute inset-0">
+          <img 
+            src="/assets/Menu_Prasmanan_1.jpeg" 
+            alt="Sajian prasmanan tradisional Bali oleh Warung PKK" 
+            className="w-full h-full object-cover"
+          />
+          {/* Dark gradient so text reads clearly against the photo */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         </div>
 
-        {/* Large Tartine-Style Editorial Serif Title */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal leading-[1.12] tracking-tight text-[#FAF7F2] max-w-4xl mx-auto">
-          Cita rasa otentik tradisi Denpasar, diracik dengan ketulusan dan higienitas modern.
-        </h1>
+        {/* Content — aligned bottom-left, not centered */}
+        <div className="relative z-10 max-w-6xl mx-auto px-5 w-full">
+          
+          <p className="text-[13px] text-white/70 mb-3">
+            Katering & Dapur Komunitas • TP PKK Desa Dauh Puri Kaja, Denpasar
+          </p>
 
-        {/* Supporting Narrative */}
-        <p className="font-sans text-sm sm:text-base text-[#C9BBA5] mt-6 max-w-2xl mx-auto leading-relaxed font-light">
-          Dari paket nasi kotak rapat kedinasan, sajian sakral upacara adat Bali, buffet prasmanan hajatan, hingga snack box higienis — seluruh sajian dimasak segar oleh ibu-ibu penggerak TP PKK Desa Dauh Puri Kaja.
-        </p>
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-white leading-[1.15] max-w-2xl">
+            Cita rasa otentik dapur Denpasar, diracik dengan tradisi dan kebersihan.
+          </h1>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-          <a 
-            href="#katalog" 
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs font-semibold tracking-[0.16em] uppercase text-[#1F1916] bg-[#FAF7F2] hover:bg-[#EFE8DC] transition-all duration-300 shadow-md active:scale-95"
-          >
-            <span>Jelajahi Katalog & Harga</span>
-            <ArrowDown className="w-3.5 h-3.5" />
-          </a>
+          <p className="text-[14px] sm:text-[15px] text-white/75 mt-4 max-w-lg leading-relaxed font-light">
+            Nasi kotak rapat kedinasan, sajian adat upacara Bali, prasmanan hajatan, dan snack box higienis.
+          </p>
 
-          <a 
-            href={getWhatsAppUrl()}
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs font-semibold tracking-[0.16em] uppercase text-[#FAF7F2] border border-white/30 hover:border-white hover:bg-white/10 transition-all duration-300 backdrop-blur-xs"
-          >
-            <MessageCircle className="w-3.5 h-3.5" />
-            <span>Konsultasi Pemesanan</span>
-          </a>
+          {/* CTAs */}
+          <div className="flex flex-wrap items-center gap-3 mt-7">
+            <a 
+              href="#katalog" 
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-[#1F1916] text-sm font-medium rounded-none hover:bg-[#F0EDE8] transition-colors"
+            >
+              Lihat Menu & Harga
+              <ArrowDown className="w-4 h-4" />
+            </a>
+            <a 
+              href={waUrl}
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-white border border-white/40 rounded-none hover:bg-white/10 transition-colors"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Pesan via WhatsApp
+            </a>
+          </div>
         </div>
+      </section>
 
+      {/* Quick facts strip — plain, no over-styling */}
+      <div className="bg-white border-b border-[#1F1916]/8 py-6">
+        <div className="max-w-6xl mx-auto px-5 grid grid-cols-2 md:grid-cols-4 gap-5">
+          {[
+            { label: 'Bahan Baku', value: '100% Segar Lokal' },
+            { label: 'Resep', value: 'Olahan Tangan Ibu PKK' },
+            { label: 'Kapasitas', value: '500+ Porsi/Hari' },
+            { label: 'Area Layanan', value: 'Denpasar & Sekitar' },
+          ].map(item => (
+            <div key={item.label}>
+              <span className="text-[11px] text-[#8D7B72] uppercase tracking-wide block">{item.label}</span>
+              <span className="text-[14px] text-[#1F1916] font-medium mt-0.5 block">{item.value}</span>
+            </div>
+          ))}
+        </div>
       </div>
-
-      {/* Tartine Style Editorial Metrics Strip */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 w-full mt-12 pt-8 border-t border-white/15">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div>
-            <span className="block text-[10px] uppercase tracking-[0.25em] text-[#C9BBA5] font-medium">Bahan Baku</span>
-            <span className="font-serif text-lg text-[#FAF7F2] italic mt-0.5 block">100% Segar Lokal</span>
-          </div>
-          <div>
-            <span className="block text-[10px] uppercase tracking-[0.25em] text-[#C9BBA5] font-medium">Resep Tradisi</span>
-            <span className="font-serif text-lg text-[#FAF7F2] italic mt-0.5 block">Olahan Tangan PKK</span>
-          </div>
-          <div>
-            <span className="block text-[10px] uppercase tracking-[0.25em] text-[#C9BBA5] font-medium">Kapasitas Produksi</span>
-            <span className="font-serif text-lg text-[#FAF7F2] italic mt-0.5 block">Hingga 500+ Porsi/Hari</span>
-          </div>
-          <div>
-            <span className="block text-[10px] uppercase tracking-[0.25em] text-[#C9BBA5] font-medium">Layanan Katering</span>
-            <span className="font-serif text-lg text-[#FAF7F2] italic mt-0.5 block">Denpasar & Sekitarnya</span>
-          </div>
-        </div>
-      </div>
-
-    </section>
+    </>
   );
 }

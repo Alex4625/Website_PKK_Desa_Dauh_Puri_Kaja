@@ -1,69 +1,99 @@
 import React from 'react';
-import { ShieldCheck, Utensils, FileText, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Utensils, FileText, Check } from 'lucide-react';
 
 export default function StandardsSection() {
   const standards = [
     {
       icon: ShieldCheck,
       title: "Segel Resmi Penjamin Mutu",
-      desc: "Setiap boks dan wadah konsumsi ditutup stiker segel merah Warung PKK yang memastikan kemasan belum pernah dibuka sejak keluar dari dapur pengolahan."
+      desc: "Setiap boks ditutup stiker segel merah Warung PKK. Kemasan belum pernah dibuka sejak keluar dari dapur pengolahan."
     },
     {
       icon: Utensils,
       title: "Pemisahan Kompartemen & Sambal Cup",
-      desc: "Lauk basah, gorengan renyah, kerupuk, sayur, dan sambal dipisah dalam sekat khusus agar kerenyahan dan cita rasa masing-masing hidangan tetap prima."
+      desc: "Lauk basah, gorengan, kerupuk, sayur, dan sambal dipisah dalam sekat khusus agar rasa dan tekstur tetap prima."
     },
     {
       icon: FileText,
-      title: "Dukungan Administrasi & SPJ Kedinasan",
-      desc: "Memenuhi kebutuhan pelaporan keuangan instansi pemerintah desa, BUMDes, dinas daerah, dan sekolah dengan kelengkapan nota resmi dan cap basah."
+      title: "Administrasi & SPJ Kedinasan",
+      desc: "Kelengkapan nota resmi, cap basah, dan faktur untuk pelaporan keuangan instansi, BUMDes, dan dinas daerah."
     }
   ];
 
+  const guarantees = [
+    "Bahan baku segar dari pasar lokal Denpasar",
+    "Dimasak pada hari yang sama",
+    "Kemasan food-grade tahan panas bersegel",
+    "Faktur dan stempel dinas lengkap untuk SPJ"
+  ];
+
   return (
-    <section id="standar-mutu" className="py-20 bg-[#FAF7F2] hairline-b">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="standar" className="py-20 bg-[#FAF7F2] border-b border-[#1F1916]/8">
+      <div className="max-w-6xl mx-auto px-5">
         
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-[10px] uppercase tracking-[0.28em] font-bold text-[#B25A34] block mb-2">
-            Jaminan Mutu & Higienitas
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-[#1F1916] font-normal">
-            Standar Pengemasan Bersih untuk Setiap Pertemuan
+        <div className="mb-14">
+          <h2 className="font-serif text-2xl sm:text-4xl text-[#1F1916] leading-tight">
+            Standar Kemasan & Mutu
           </h2>
-          <p className="text-xs sm:text-sm text-[#685951] font-light mt-2 leading-relaxed">
-            Menghadirkan kenyamanan bagi panitia rapat, instansi kedinasan, maupun upakara keluarga dengan protokol sanitasi pangan ketat.
+          <p className="text-[14px] text-[#463A34] mt-2 max-w-xl leading-relaxed">
+            Kepastian mutu untuk panitia rapat, instansi kedinasan, dan upacara keluarga.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {standards.map((std, idx) => {
-            const Icon = std.icon;
-            return (
-              <div 
-                key={idx}
-                className="bg-white p-8 rounded-2xl hairline-all shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-[#FAF7F2] hairline-all flex items-center justify-center text-[#B25A34] mb-6">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="font-serif text-xl font-medium text-[#1F1916] mb-2">
-                    {std.title}
-                  </h3>
-                  <p className="text-xs text-[#685951] font-light leading-relaxed">
-                    {std.desc}
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 mt-6 pt-4 hairline-t text-[11px] text-[#8D7B72] font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Terstandarisasi Dapur PKK</span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          
+          {/* Left: guarantee panel */}
+          <div className="lg:col-span-5 bg-white rounded-lg border border-[#1F1916]/8 p-6 sm:p-8">
+            <ShieldCheck className="w-8 h-8 text-[#B25A34] mb-5" />
+            
+            <h3 className="font-serif text-xl sm:text-2xl text-[#1F1916] leading-snug">
+              Jaminan untuk Penyelenggara Acara
+            </h3>
 
+            <p className="text-[13px] text-[#685951] mt-3 leading-relaxed">
+              Konsumsi adalah wajah kesuksesan acara. Dapur PKK memastikan ketepatan waktu, cita rasa hangat, dan kebersihan prima.
+            </p>
+
+            <ul className="mt-6 pt-5 border-t border-[#1F1916]/6 space-y-3">
+              {guarantees.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-2.5 text-[13px] text-[#463A34]">
+                  <Check className="w-4 h-4 text-green-600 shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-6 pt-5 border-t border-[#1F1916]/6 text-[12px] text-[#8D7B72]">
+              TP PKK Desa Dauh Puri Kaja • 100% Halal & Higienis
+            </div>
+          </div>
+
+          {/* Right: standards cards */}
+          <div className="lg:col-span-7 space-y-4">
+            {standards.map((std, idx) => {
+              const Icon = std.icon;
+              return (
+                <div 
+                  key={idx}
+                  className="bg-white p-5 sm:p-6 rounded-lg border border-[#1F1916]/8 flex items-start gap-4"
+                >
+                  <div className="w-10 h-10 rounded-md bg-[#FAF7F2] border border-[#1F1916]/8 flex items-center justify-center text-[#B25A34] shrink-0">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-[15px] font-semibold text-[#1F1916]">
+                      {std.title}
+                    </h4>
+                    <p className="text-[13px] text-[#463A34] leading-relaxed mt-1">
+                      {std.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
       </div>
     </section>
   );
